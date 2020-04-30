@@ -1,0 +1,1 @@
+alter table element modify constraint element_3  INITIALLY DEFERRED enable novalidate
