@@ -12,7 +12,7 @@ FROM gv$lock a, gv$lock b
 
 
 
--- Заблокированные объекты 1
+-- ‡аблокированные объекты 1
 select a.*,e.*,sysdate from gv$locked_object a, dba_objects e
 where A.OBJECT_ID=E.OBJECT_ID -- and xidusn>0 -- если 0,то еще не заблокирован, но в очереди
 order by locked_mode desc,xidusn desc, object_name;
