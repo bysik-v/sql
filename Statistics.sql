@@ -13,7 +13,7 @@ round(sum(ccwait_delta)/1000000,0) concurrency_wait_sek,
 sql_id
 from 
 (select distinct snap_id from DBA_HIST_SNAPSHOT 
-where begin_interval_time between to_date('29.12.2017 10','DD.MM.YYYY HH24') and to_date('29.12.2017 15','DD.MM.YYYY HH24') and rownum>0
+where begin_interval_time between to_date('30.04.2017 10','DD.MM.YYYY HH24') and to_date('30.04.2017 15','DD.MM.YYYY HH24') and rownum>0
 ) snaps,
 DBA_HIST_SQLSTAT s
 where s.snap_id=snaps.snap_id
